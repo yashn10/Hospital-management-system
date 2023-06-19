@@ -1,4 +1,4 @@
-# MiniProject4
+# Mini Project 2 (Hospital Management System)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
