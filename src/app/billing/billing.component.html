@@ -1,0 +1,130 @@
+<h2 style="margin-top: 100px; text-align: center;">Billing List</h2>
+<button type="button" class="btn btn-success mt-3 mb-3" (click)="openModal(template4)">Add
+    Billing</button>
+
+<form [formGroup]="billingForm">
+
+    <ng-template #template4>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Add Billing</h4>
+            <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group text-center">
+                <img src="../assets/bill.png" style="width: 100px;">
+            </div>
+            <div class="form-group">
+                <label class="form-label" style="font-weight: 700;">First Name:</label>
+                <i class="fa fa-user icon"></i>
+                <input type="text" class="form-control" placeholder="Enter First Name" formControlName="firstname3">
+                <div class="red" *ngIf="issubmitted==true">
+                    <div *ngIf="billingForm.controls['firstname3'].errors?.['required']">
+                        Subject is required..!</div>
+                    <div *ngIf="billingForm.controls['firstname3'].errors?.['minLength']">
+                        Subject Name should be min 3 characters..!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" style="font-weight: 700;">Last Name:</label>
+                <i class="fa fa-user icon"></i>
+                <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastname3">
+                <div class="red" *ngIf="issubmitted==true">
+                    <div *ngIf="billingForm.controls['lastname3'].errors?.['required']">
+                        Subject is required..!</div>
+                    <div *ngIf="billingForm.controls['lastname3'].errors?.['minLength']">
+                        Subject Name should be min 3 characters..!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" style="font-weight: 700;">Total Bill:</label>
+                <i class="fa fa-envelope icon"></i>
+                <input type="number" class="form-control" placeholder="Enter total bill" formControlName="email3">
+                <div class="red" *ngIf="issubmitted==true">
+                    <div *ngIf="billingForm.controls['email3'].errors?.['required']">
+                        Subject is required..!</div>
+                    <div *ngIf="billingForm.controls['email3'].errors?.['minLength']">
+                        Subject Name should be min 3 characters..!</div>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <label class="form-label" style="font-weight: 700;">Total Bill:</label>
+                <i class="fa fa-envelope icon"></i>
+                <input type="number" class="form-control" placeholder="Enter Total Bill" formControlName="contact3">
+            </div> -->
+            <button type="button" class="btn" style="background-color: #cbc6c6;border: none;"
+                (click)="clear3()">Clear</button>
+            <button type="submit" class="btn btn-success ml-3" (click)="submit3()"
+                *ngIf="iseditclicked3 == 'no'">Submit</button>
+            <button type="button" class="btn btn-success ml-3" (click)="update3()"
+                *ngIf="iseditclicked3 == 'yes'">Update</button>
+        </div>
+    </ng-template>
+
+</form>
+
+<table class="table table-hover text-center" style="height: 400px;">
+    <thead>
+        <tr style="text-align: center;">
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Total Bill</th>
+            <!-- <th>Total Bill</th> -->
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody style="overflow-y:auto; height:300px;">
+        <tr *ngFor="let statement of statementlist; let i = index">
+            <td style="width: 270px;">{{statement.firstname3}}</td>
+            <td style="width: 270px;">{{statement.lastname3}}</td>
+            <td style="width: 280px;">{{statement.email3}}</td>
+            <!-- <td style="width: 270px;">{{statement.contact3}}</td> -->
+            <td style="width: 260px;">
+                <button type="button" class="btn" (click)="openModal(template4)" (click)="edit3(i)"><img
+                        src="../assets/edit (1).png" style="width: 30px;">
+                    <!-- <ng-template #template4>
+                        <div class="modal-header">
+                            <h4 class="modal-title pull-left">Update Billing</h4>
+                            <button type="button" class="btn-close close pull-right" aria-label="Close"
+                                (click)="modalRef?.hide()">
+                                <span aria-hidden="true" class="visually-hidden">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="form-label" style="font-weight: 700;">First Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter First Name"
+                                    formControlName="firstname3">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-weight: 700;">Last Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter Last Name"
+                                    formControlName="lastname3">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-weight: 700;">Contact:</label>
+                                <input type="number" class="form-control" placeholder="Enter Contact Number"
+                                    formControlName="email3">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="font-weight: 700;">Total Bill:</label>
+                                <input type="number" class="form-control" placeholder="Enter Total Bill"
+                                    formControlName="contact3">
+                            </div>
+                            <button type="button" class="btn" style="background-color: #cbc6c6;border: none;"
+                                (click)="clear3()">Clear</button>
+                            <button type="button" class="btn btn-success ml-3" (click)="submit3()"
+                                *ngIf="iseditclicked3 == 'no' ">Submit</button>
+                            <button type="button" class="btn btn-success ml-3" *ngIf="iseditclicked3 == 'yes' "
+                                (click)="update3()">Update</button>
+                        </div>
+                    </ng-template> -->
+                </button>
+                <button type="button" class="btn" (click)="delete3(i)"><img src="../assets/delete (3).png"
+                        style="width: 30px;"></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>

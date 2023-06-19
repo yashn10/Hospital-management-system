@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-dark justify-content-center container-fluid fixed-top">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" style="font-size: 20px; color: white; margin-top: 10px;" routerLink="">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="font-size: 20px; color: white; margin-top: 10px;" routerLink="doctor">Doctor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="font-size: 20px; color: white; margin-top: 10px;" routerLink="patient">Patient</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="font-size: 20px; color: white; margin-top: 10px;" routerLink="staff">Staff</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="font-size: 20px; color: white; margin-top: 10px;" routerLink="billing">Billing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
