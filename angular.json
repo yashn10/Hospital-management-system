@@ -1,12 +1,20 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "3023388e-d0ae-40cb-b778-ae63accc0857"
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "MiniProject3": {
+=======
+    "MiniProject4": {
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +31,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/mini-project3",
+=======
+            "outputPath": "dist/mini-project4",
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +87,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "MiniProject3:build:production"
             },
             "development": {
               "browserTarget": "MiniProject3:build:development"
+=======
+              "browserTarget": "MiniProject4:build:production"
+            },
+            "development": {
+              "browserTarget": "MiniProject4:build:development"
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +105,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "MiniProject3:build"
+=======
+            "browserTarget": "MiniProject4:build"
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
           }
         },
         "test": {
@@ -110,5 +133,9 @@
       }
     }
   },
+<<<<<<< HEAD
   "defaultProject": "MiniProject3"
+=======
+  "defaultProject": "MiniProject4"
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
 }

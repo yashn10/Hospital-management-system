@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # MiniProject3
+=======
+# Mini Project 2 (Hospital Management System)
+>>>>>>> 1ae42c149ea7d74d909233f0f0feabc82a53b169
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
