@@ -1,0 +1,26 @@
+<div id="id012" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php" method="post" style="width: 30%;">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id012').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="../assets/profile.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="username1">
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="password1">
+
+        <button class="bt" type="submit" [disabled]="username1 == '' || password1 == '' " (click)="register()">Register</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id012').style.display='none'"
+          class="cancelbtn bt">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
